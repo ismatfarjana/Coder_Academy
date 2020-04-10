@@ -33,6 +33,12 @@
 
       @color = color
     end
+
+      def spray_paint(color)
+        self.color = color
+        "My car is now #{color}!"
+      end
+
     def print
       "color #{color}"
     end
@@ -43,3 +49,4 @@
 #  p pippip.speed_up(200)
 #  p pippip.break(100)
 p pippip.change_info("red")
+p pippip.spray_paint("green")
