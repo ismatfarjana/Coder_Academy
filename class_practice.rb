@@ -1,5 +1,6 @@
  class Mycar
-
+  attr_accessor :color
+  attr_reader :year
     def initialize(year,color,model)
       @year = year
       @color = color
@@ -28,10 +29,17 @@
 
     end 
 
+    def change_info(color)
 
+      @color = color
+    end
+    def print
+      "color #{color}"
+    end
  end
 
  pippip = Mycar.new(1990, "blue", "gugugags")
- p pippip.current_speed
- p pippip.speed_up(200)
- p pippip.break(100)
+#  p pippip.current_speed
+#  p pippip.speed_up(200)
+#  p pippip.break(100)
+p pippip.change_info("red")
