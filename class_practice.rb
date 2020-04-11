@@ -1,28 +1,36 @@
- class Mycar
-  attr_accessor :color
-  attr_reader :year, :model
-    def initialize(year,color,model)
-      @year = year
-      @color = color
-      @model = model
-      @current_speed = 0
-    end  
-#class_method
+class Vehicle
 
-    def self.gas_milage(gallon, mile)
-      "#{gallon/mile} gallon per mile."
-    end
+    attr_accessor :color
+    attr_reader :year, :model
+    @@number_of_vehicle  = 0
+      def initialize(year,color,model)
+        @year = year
+        @color = color
+        @model = model
+        @current_speed = 0
+        @@number_of_vehicle += 1
+      end 
+      
+      def number_of_vehicle
+        "Total vehicle #{@@number_of_vehicle}"
+      end
 
-#to_s
+       #class_method
 
-    def to_s
-       "My car is #{model}, #{color}, made in #{year}."
-    end
+       def self.gas_milage(gallon, mile)
+        "#{gallon/mile} gallon per mile."
+      end
 
-    def speed_up(speed_num)
-      @current_speed += speed_num   
-      "My car is speeding up to #{@current_speed}"   
-    end 
+      #to_s
+
+      def to_s
+        "My car is #{model}, #{color}, made in #{year}."
+      end
+
+      def speed_up(speed_num)
+        @current_speed += speed_num   
+        "My car is speeding up to #{@current_speed}"   
+      end 
 
 
     def break(break_num)
@@ -42,7 +50,6 @@
     end 
 
     def change_info(color)
-
       @color = color
     end
 
@@ -55,6 +62,15 @@
       "color #{color}"
     end
 
+
+end
+ 
+ class Mycar < Vehicle
+      NUMBER_OF_DOOR = 4
+ end
+
+ class MyTruck < Vehicle
+  NUMBER_OF_DOOR = 2
  end
 
  pippip = Mycar.new("1990", "blue", "gugugags")
@@ -65,6 +81,8 @@ p pippip.change_info("red")
 p pippip.spray_paint("green")
 p Mycar.gas_milage(10,2)
 puts pippip
+
+p pippip.number_of_vehicle
 
 
 class Person
