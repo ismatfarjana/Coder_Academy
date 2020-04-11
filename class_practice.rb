@@ -1,3 +1,12 @@
+module Towable
+  def tow?(pounds)
+    pounds > 2000 ? true : false
+  end
+end
+
+
+
+
 class Vehicle
 
     attr_accessor :color
@@ -24,7 +33,7 @@ class Vehicle
       #to_s
 
       def to_s
-        "My car is #{model}, #{color}, made in #{year}."
+        "This is #{model}, #{color}, made in #{year}."
       end
 
       def speed_up(speed_num)
@@ -66,14 +75,22 @@ class Vehicle
 end
  
  class Mycar < Vehicle
+    
       NUMBER_OF_DOOR = 4
  end
 
  class MyTruck < Vehicle
   NUMBER_OF_DOOR = 2
+  
+
+  include Towable
  end
 
  pippip = Mycar.new("1990", "blue", "gugugags")
+ truck = MyTruck.new("2000", "green", "vrumiz")
+
+ puts truck
+ p truck.tow?(1500)
 #  p pippip.current_speed
 #  p pippip.speed_up(200)
 #  p pippip.break(100)
