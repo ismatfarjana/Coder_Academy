@@ -65,3 +65,14 @@ p pippip.change_info("red")
 p pippip.spray_paint("green")
 p Mycar.gas_milage(10,2)
 puts pippip
+
+
+class Person
+  attr_accessor :name
+  def initialize(name)
+    @name = name
+  end
+end
+
+bob = Person.new("Steve")
+bob.name = "Bob"
