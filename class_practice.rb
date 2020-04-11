@@ -7,6 +7,12 @@
       @model = model
       @current_speed = 0
     end  
+#class_method
+
+    def self.gas_milage(gallon, mile)
+      "#{gallon/mile} gallon per mile."
+    end
+
     def speed_up(speed_num)
       @current_speed += speed_num   
       "My car is speeding up to #{@current_speed}"   
@@ -42,6 +48,7 @@
     def print
       "color #{color}"
     end
+
  end
 
  pippip = Mycar.new(1990, "blue", "gugugags")
@@ -50,3 +57,4 @@
 #  p pippip.break(100)
 p pippip.change_info("red")
 p pippip.spray_paint("green")
+p Mycar.gas_milage(10,2)
