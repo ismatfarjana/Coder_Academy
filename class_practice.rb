@@ -99,6 +99,10 @@ p pippip.spray_paint("green")
 p Mycar.gas_milage(10,2)
 puts pippip
 
+puts Mycar.ancestors
+puts MyTruck.ancestors
+puts Vehicle.ancestors
+
 p pippip.number_of_vehicle
 
 
