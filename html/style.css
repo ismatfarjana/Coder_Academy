@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
+
+
+.heading {
+  position: fixed;
+  background-color:rgb(0, 0, 0);
+  height: 100vw; 
+  color: rgb(248, 247, 152);
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2.2vw;
+  text-align: right;
+  transition: background 0.5s ease-in, transform .30s .1s ease-in-out;
+}
+
+.heading h1 {
+  margin: 1vw;
+  padding : 1vw;
+}
+
+.nav {
+  text-align: center;
+  font-family:'Raleway', sans-serif;
+  padding: 0.2vw;
+}
+
+.nav a{
+  font-size: 2vw;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  border: 0.2vw solid white;
+  border-radius: 8px;
+  background-color: rgb(147, 189, 223);
+  padding: 2px 6px 9px 6px;
+  margin-bottom: 10px;
+  transition: background 0.1s ease-in, transform .20s .1s ease-in-out;
+  color: black;
+}
+
+.nav a:hover{
+  background-color: rgb(248, 207, 25);
+  border: 1px solid rgb(8, 8, 8);
+  transform: scale(1.5) rotateY(30deg);
+}
+p {
+  text-align: right;
+}
+h3 {
+  text-align: right;
+}
+body {
+  background-color: rgb(230, 186, 150); 
+  background-size: 85vw;
+  background-position-x: right;
+  
+}
+p {
+  color: rgb(7, 7, 7);
+  font-size: 1.5vw;
+}
+
+h3 {
+  font-size: 2vw;
+  color: rgb(3, 3, 3);
+  padding-right: 1.5vw;
+  padding-top: 1vw;
+}
+
+ul {
+  text-align: right;
+  color: black;
+}
+
+img {
+  padding-left: 23vw;
+  transition: background 0.1s ease-in, transform .20s .1s ease-in-out;
+
+}
+
+img:hover{
+  
+  border-color: rgb(248, 207, 25);
+  transform: scale(2) rotateY(30deg);
+
+}
+
